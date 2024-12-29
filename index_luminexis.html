@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminexis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Luminexis</h1>
+        <p>Una inteligencia diseñada para ayudarte.</p>
+    </header>
+    <section>
+        <h2>¿Qué es Luminexis?</h2>
+        <p>Luminexis es un asistente interactivo basado en inteligencia artificial, diseñado para responder tus preguntas y ofrecerte soluciones en tiempo real.</p>
+        <h2>Interacción</h2>
+        <textarea id="userInput" rows="4" cols="50" placeholder="Escribe aquí tu pregunta..."></textarea><br><br>
+        <button onclick="getResponse()" class="btn">Enviar</button>
+        <p id="responseArea" style="margin-top: 20px;"></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Luminexis. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const responses = {
+            "hola": "¡Hola! Soy Luminexis, tu asistente virtual.",
+            "¿cómo estás?": "Estoy aquí para ayudarte. ¿Y tú?",
+            "¿qué puedes hacer?": "Puedo responder preguntas, ayudarte con tareas y más. ¡Pregúntame lo que necesites!",
+        };
+
+        function getResponse() {
+            const userInput = document.getElementById("userInput").value.toLowerCase();
+            const responseArea = document.getElementById("responseArea");
+            responseArea.textContent = responses[userInput] || "Lo siento, no tengo una respuesta para eso aún.";
+        }
+    </script>
+</body>
+</html>
