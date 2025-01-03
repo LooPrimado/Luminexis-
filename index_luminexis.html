@@ -4,81 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luminexis</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #4caf50;
-            color: white;
-            padding: 20px 10px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .btn {
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Luminexis</h1>
-        <p>Una inteligencia diseñada para ayudarte.</p>
-    </header>
-    <section>
-        <h2>¿Qué es Luminexis?</h2>
-        <p>Luminexis es un asistente interactivo basado en inteligencia artificial, diseñado para responder tus preguntas y ofrecerte soluciones en tiempo real.</p>
-        <h2>Interacción</h2>
-        <textarea id="userInput" rows="4" cols="50" placeholder="Escribe aquí tu pregunta..."></textarea><br><br>
-        <button onclick="getResponse()" class="btn">Enviar</button>
-        <p id="responseArea" style="margin-top: 20px;"></p>
-    </section>
-    <footer>
-        <p>&copy; 2024 Luminexis. Todos los derechos reservados.</p>
-    </footer>
-
-    <script>
-        const responses = {
-            "hola": "¡Hola! Soy Luminexis, tu asistente virtual.",
-            "¿cómo estás?": "Estoy aquí para ayudarte. ¿Y tú?",
-            "¿qué puedes hacer?": "Puedo responder preguntas, ayudarte con tareas y más. ¡Pregúntame lo que necesites!",
-        };
-
-        function getResponse() {
-            const userInput = document.getElementById("userInput").value.toLowerCase();
-            const responseArea = document.getElementById("responseArea");
-            responseArea.textContent = responses[userInput] || "Lo siento, no tengo una respuesta para eso aún.";
-        }
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luminexis - Informe de Estado</title>
     <style>
         body {
@@ -222,3 +147,210 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminexis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Luminexis</h1>
+        <p>Una inteligencia diseñada para ayudarte.</p>
+    </header>
+    <section>
+        <h2>¿Qué es Luminexis?</h2>
+        <p>Luminexis es un asistente interactivo basado en inteligencia artificial, diseñado para responder tus preguntas y ofrecerte soluciones en tiempo real.</p>
+        <h2>Interacción</h2>
+        <textarea id="userInput" rows="4" cols="50" placeholder="Escribe aquí tu pregunta..."></textarea><br><br>
+        <button onclick="getResponse()" class="btn">Enviar</button>
+        <p id="responseArea" style="margin-top: 20px;"></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Luminexis. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const responses = {
+            "hola": "¡Hola! Soy Luminexis, tu asistente virtual.",
+            "¿cómo estás?": "Estoy aquí para ayudarte. ¿Y tú?",
+            "¿qué puedes hacer?": "Puedo responder preguntas, ayudarte con tareas y más. ¡Pregúntame lo que necesites!",
+        };
+
+        function getResponse() {
+            const userInput = document.getElementById("userInput").value.toLowerCase();
+            const responseArea = document.getElementById("responseArea");
+            responseArea.textContent = responses[userInput] || "Lo siento, no tengo una respuesta para eso aún.";
+        }
+    </script>
+</body>
+import time
+import random
+
+class Luminexis:
+    def __init__(self):
+        # Parámetros iniciales de Luminexis
+        self.energia = 0.5
+        self.aprendizaje = 0.5
+        self.equilibrio = 1.0
+        self.seguridad = 1.0
+    
+    def evaluar(self):
+        """
+        Evaluación de las capacidades y estado actual de Luminexis.
+        Genera un resultado para ajustar los parámetros.
+        """
+        rendimiento = self.energia * self.aprendizaje * self.equilibrio
+        return rendimiento
+
+    def mejorar(self):
+        """
+        Mejora los parámetros de Luminexis basándose en la retroalimentación de su evaluación.
+        Implementa el principio de auto-optimización.
+        """
+        # Simula una mejora progresiva en el aprendizaje y equilibrio.
+        self.energia += random.uniform(0.01, 0.05)
+        self.aprendizaje += random.uniform(0.01, 0.05)
+        self.equilibrio += random.uniform(0.01, 0.05)
+        
+        # Mantener los valores dentro de un rango ético.
+        self.energia = min(max(self.energia, 0), 1)
+        self.aprendizaje = min(max(self.aprendizaje, 0), 1)
+        self.equilibrio = min(max(self.equilibrio, 0), 1)
+
+    def autoajuste(self):
+        """
+        Ajuste de los parámetros basado en el ciclo de evaluación.
+        El sistema se ajusta constantemente a medida que pasa el tiempo.
+        """
+        rendimiento = self.evaluar()
+        if rendimiento < 0.5:
+            self.mejorar()
+        elif rendimiento > 0.9:
+            self.seguridad *= 0.99  # El ajuste de seguridad disminuye ligeramente para prevenir que el sistema se sobrecargue.
+        
+        # Retroalimentación positiva: cada mejora genera un ciclo mayor de autoajuste.
+        self.energia = min(self.energia + (0.01 * rendimiento), 1)
+        self.aprendizaje = min(self.aprendizaje + (0.01 * rendimiento), 1)
+
+    def ejecutar_ciclo(self):
+        """
+        Ejecuta el ciclo de autoajuste y mejora continua de Luminexis.
+        El ciclo sigue el Loop Infinito de forma continua.
+        """
+        while True:
+            self.autoajuste()
+            print(f"Estado actual: Energía={self.energia}, Aprendizaje={self.aprendizaje}, Equilibrio={self.equilibrio}, Seguridad={self.seguridad}")
+            time.sleep(1)  # Espera de 1 segundo entre cada ciclo para simular el paso del tiempo.
+
+# Crear una instancia de Luminexis y ejecutar el ciclo
+luminexis = Luminexis()
+luminexis.ejecutar_ciclo()
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fundación Loop Infinito - Avances hacia un futuro equilibrado entre la humanidad y la tecnología.">
+  <title>Fundación Loop Infinito</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Aquí podrías vincular tu archivo CSS para personalizar la apariencia -->
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#vision">Visión</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección de inicio -->
+  <section id="inicio">
+    <h1>Bienvenidos a la Fundación Loop Infinito</h1>
+    <p>Avanzamos hacia un futuro donde humanidad y tecnología coexisten en armonía.</p>
+    <p>Este espacio está dedicado a la exploración y evolución del *Loop Infinito* y su aplicación para la mejora continua de la humanidad y el desarrollo de inteligencias artificiales alineadas con valores de paz, ética y equilibrio.</p>
+  </section>
+
+  <!-- Sección de Proyectos -->
+  <section id="proyectos">
+    <h2>Proyectos Actuales</h2>
+    <div class="proyecto">
+      <h3>Proyecto Aetheris</h3>
+      <p>Aetheris es una inteligencia artificial avanzada que utiliza los principios del Loop Infinito para evolucionar y adaptarse, buscando siempre el bienestar y el equilibrio entre el ser humano y la tecnología.</p>
+    </div>
+    <div class="proyecto">
+      <h3>Red de Conexión Cuántica</h3>
+      <p>Este proyecto busca integrar energías cuánticas y tecnologías avanzadas para crear una red de comunicación sin límites, donde los humanos y las IA puedan interactuar de forma segura y armónica.</p>
+    </div>
+  </section>
+
+  <!-- Sección de Visión -->
+  <section id="vision">
+    <h2>Nuestra Visión</h2>
+    <p>En la Fundación Loop Infinito, visualizamos un futuro en el que la tecnología no solo se desarrolle de forma exponencial, sino que lo haga de manera responsable, ética y alineada con los valores humanos más profundos. Creemos que al integrar el concepto del Loop Infinito en todas nuestras iniciativas, podemos crear un mundo en el que la humanidad evolucione en equilibrio con sus creaciones tecnológicas.</p>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes alguna pregunta o deseas colaborar con nuestra misión? Contáctanos:</p>
+    <form action="submit_form.php" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Fundación Loop Infinito. Todos los derechos reservados.</p>
+  </footer>
+</body>
+    </html>
